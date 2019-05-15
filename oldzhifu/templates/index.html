@@ -1,0 +1,335 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href='{% static 'css/bootstrap.min.css' %}' />
+        <link rel="stylesheet" href='{%static  'css/global.css' %}' />
+        <link rel="stylesheet" href='{%static  'css/style.css'%}' />
+	</head>
+	<body class="bg01">
+		<div class="header hidden-xs hidden-sm clearfix">
+			<div class="container">
+				<a href="index.html" class="logo">
+					 <img  height="450" class="top_one_img"   src='{%static  'upload/map.png'%}'/>
+				</a>
+				<div class="nav">
+			    	<ul>
+			        	<li class="on"><a href="/OfficialWebsite/index.html/">首页</a></li>
+                        <li><a href="/OfficialWebsite/cplist.html?Typed=Default&numberpages=1">风格效果图</a></li>
+                        <li><a href="/OfficialWebsite/about.html">关于我们</a></li>
+                        <li><a href="/OfficialWebsite/newslist.html?numberpages=1">变形记</a></li>
+                        <li><a href="/OfficialWebsite/contact.html">联系我们</a></li>
+                        <li><a href="/OfficialWebsite/message.html">在线留言</a></li>
+			      	</ul>
+			    </div>
+			</div>
+		</div>
+		<div id="slideBox" class="slideBox">
+			<div class="bd">
+				<ul>
+					<li>
+						<a class="pic" href="#"><img src="{% static 'images/33559cd60695225.jpg' %}" /></a>
+					</li>
+					<li>
+						<a class="pic" href="#"><img src="{%static 'images/d9c26bc6b140a18f150d0fad63ecb60d4064.jpg'%}" /></a>
+					</li>
+                    <li>
+						<a class="pic" href="#"><img src="{% static 'images/33559cd60695225.jpg' %}" /></a>
+					</li>
+                    <li>
+						<a class="pic" href="#"><img src="{%static 'images/d9c26bc6b140a18f150d0fad63ecb60d4064.jpg'%}" /></a>
+					</li>
+				</ul>
+			</div>
+			<span class="prev hidden-xs hidden-sm"></span>
+			<span class="next hidden-xs hidden-sm"></span>
+			<ul class="hd">
+				<li></li>
+				<li></li>
+                <li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="index_section sec01">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="demand">
+                            <div class="demand_title text-center">找装修工长</div>
+                            <div class="demand_title text-center" style=" color: red; font-size: 2%; ">*目前只支持郑州地区</div>
+                               <form method="post" role="form" action="/OfficialWebsite/Demand/" class="text-center" style="margin-top: 2%;">
+                                        <div class="form-group">
+                                            <label for="name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</label>
+                                            <input type="text" class="input-sm" id="name" name="name" placeholder="请输入名称">
+                                            <input style="display: none;" type="text" class="input-sm" name="type" value="Foreman" placeholder="请输入名称">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话:</label>
+                                            <input type="text" class="input-sm" id="phone" name="phone" placeholder="请输入联系电话">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</label>
+                                            <input type="text" class="input-sm" id="address" name="address" placeholder="请输入家庭地址">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">装修风格:</label>
+                                            <input type="text" class="input-sm" id="style" name="style" placeholder="请输入想要装修的风格">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">房屋面积:</label>
+                                            <input type="text" class="input-sm" id="noodlesproduct" name="noodlesproduct" placeholder="请输入您的房屋面积">
+                                        </div>
+                                        <button type="submit" class="btn btn-default" style="width: 60%;">提交</button>
+                                </form>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="demand">
+                            <div class="demand_title text-center">找装修公司</div>
+                            <div class="demand_title text-center" style=" color: red; font-size: 2%; ">*目前只支持郑州地区</div>
+                            <form method="post" role="form" action="/OfficialWebsite/Demand/" class="text-center" style="margin-top: 2%;">
+                                        <div class="form-group">
+                                            <label for="name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</label>
+                                            <input type="text" class="input-sm" id="name" name="name" placeholder="请输入名称">
+                                            <input style="display: none;" type="text" class="input-sm" name="type" value="Company" placeholder="请输入名称">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话:</label>
+                                            <input type="text" class="input-sm" id="phone" name="phone" placeholder="请输入联系电话">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</label>
+                                            <input type="text" class="input-sm" id="address" name="address" placeholder="请输入家庭地址">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">装修风格:</label>
+                                            <input type="text" class="input-sm" id="style" name="style" placeholder="请输入想要装修的风格">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">房屋面积:</label>
+                                            <input type="text" class="input-sm" id="noodlesproduct" name="noodlesproduct" placeholder="请输入您的房屋面积">
+                                        </div>
+                                        <button type="submit" class="btn btn-default" style="width: 60%;">提交</button>
+                                </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="index_section sec02">
+
+		</div>
+		<div class="index_section sec03">
+			<div class="container" style="width: 65%">
+				<div class="row index_section_hd text-center" >
+                    <a style="color: black;" href="/OfficialWebsite/cplist.html?Typed=Default&numberpages=1">风格效果图</a>
+				</div>
+                <div class="text-right"> <a  href="/OfficialWebsite/cplist.html?Typed=Default&numberpages=1"> 更多></a></div>
+				<div class="row">
+					<ul class="product_list">
+                        {% for obj in ProductTypeList %}
+                              <li class="pro_item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <a class="pro_pic" href="/OfficialWebsite/cplist.html?id={{ obj.id }}&Typed=SelId&numberpages=1">
+                                        <img src="/static/{{ obj.path }}">
+                                    </a>
+                                    <a href="/OfficialWebsite/cplist.html?id={{ obj.id }}&Typed=SelId&numberpages=1" class="pro_tit">{{ obj.name }}</a>
+						    </li>
+                        {% endfor %}
+                        {% for obj in ProductTypeLists %}
+                             <li class="pro_item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <a class="pro_pic" target="_blank" href="{{ obj.path1 }}">
+                                        <img title="3D全景看房" src="/static/{{ obj.path }}">
+                                    </a>
+                                    <a href="{{ obj.path1 }}" class="pro_tit">{{ obj.name }}</a>
+						    </li>
+                        {% endfor %}
+
+					</ul>
+				</div>
+                <div class="row index_section_hd text-center">
+                        装修公司
+                </div>
+                <div class="text-right"> <a  href="/OfficialWebsite/DetailsCompany.html?numberpages=1"> 更多></a></div>
+                <div class="row">
+                        <ul class="product_list">
+                            {% for obj in CompanyLists %}
+                                  <li class="pro_item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a class="pro_pic" target="_blank" href="{{ obj.link }}">
+                                            <img src="/static/{{ obj.path }}">
+                                        </a>
+                                        <a href="#" class="pro_tit">{{ obj.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+				<div class="row index_section_hd text-center">
+					最新资讯
+				</div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+						<div id="news_slide" class="news_slide_box">
+							<div class="bd">
+								<ul>
+                                    {% for obj in changeList %}
+                                        <li>
+                                            <a class="pic" href="/OfficialWebsite/newsdetail.html?id={{ obj.id }}">
+                                                <img src="/static/{{ obj.titleImg }}"/>
+                                                <span class="title">
+                                                    {{ obj.title }}
+                                                </span>
+                                            </a>
+									    </li>
+                                    {% endfor %}
+								</ul>
+							</div>
+							<span class="prev"></span>
+							<span class="next"></span>
+						</div>
+					</div>
+                     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+						<ul class="news_list">
+                            {% for obj in changesList %}
+                                <li>
+                                    <div class="news_pic col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                                        <a href="/OfficialWebsite/newsdetail.html?id={{ obj.id }}" class="">
+                                            <img src="/static/{{ obj.titleImg }}"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                                        <a href="/OfficialWebsite/newsdetail.html?id={{ obj.id }}" class="news_tit">{{ obj.title }}</a>
+                                        <p class="news_time">{{ obj.date }}</p>
+                                        <p class="news_desc">{{ obj.titleTest }}</p>
+                                    </div>
+							    </li>
+                            {% endfor %}
+						</ul>
+					</div>
+                </div>
+                <div class="row index_section_hd text-center">装修流程</div>
+				<div class="row">
+					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+						<ul class="news_list">
+							<li>
+								<div class="news_pic col-lg-3 col-md-3 col-sm-4 col-xs-12">
+									<a href="#" class="">
+                                        <img src="{% static 'upload/timg (13).jpg' %}"/>
+									</a>
+								</div>
+								<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+									<a href="#" class="news_tit">北京木制品委员会成立 行业整合之势逐步推进中</a>
+									<p class="news_time">2016-02-18</p>
+									<p class="news_desc">2016年1月24日，北京家居行业协会木制品委员会成立正式成立，此次木制品委员会的成立，旨在加强对木制品生产企业的专项服务，全面提升木制品企业的创新能</p>
+								</div>
+							</li>
+							<li>
+								<div class="news_pic col-lg-3 col-md-3 col-sm-4 col-xs-12">
+									<a href="#" class="">
+                                        <img src="{% static 'upload/timg (14).jpg' %}"/>
+									</a>
+								</div>
+								<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+									<a href="#" class="news_tit">北京木制品委员会成立 行业整合之势逐步推进中</a>
+									<p class="news_time">2016-02-18</p>
+									<p class="news_desc">2016年1月24日，北京家居行业协会木制品委员会成立正式成立，此次木制品委员会的成立，旨在加强对木制品生产企业的专项服务，全面提升木制品企业的创新能</p>
+								</div>
+							</li>
+							<li>
+								<div class="news_pic col-lg-3 col-md-3 col-sm-4 col-xs-12">
+									<a href="#" class="">
+                                        <img src="{% static 'upload/timg (15).jpg' %}"/>
+									</a>
+								</div>
+								<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+									<a href="#" class="news_tit">北京木制品委员会成立 行业整合之势逐步推进中</a>
+									<p class="news_time">2016-02-18</p>
+									<p class="news_desc">2016年1月24日，北京家居行业协会木制品委员会成立正式成立，此次木制品委员会的成立，旨在加强对木制品生产企业的专项服务，全面提升木制品企业的创新能</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+                          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+						<div id="news_slide" class="news_slide_box">
+							<div class="bd">
+								<ul>
+									<li>
+										<a class="pic" href="#">
+                                            <img src="{% static 'upload/timg (11).jpg' %}"/>
+											<span class="title">
+												厕所如何快速去味
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="footer_ewm col-lg-3 col-md-3 col-sm-3 hidden-xs">
+                             <img src="{% static 'upload/code.png' %}"/>
+						</div>
+						<ul class="footer_contact col-lg-9 col-md-9 col-sm-9 hidden-xs">
+							<li>电话：<i>400-000-0000</i></li>
+							<li>服务时间：周一到周五早8:00到晚5:00</li>
+							<li>邮箱：xxx@163.com</li>
+							<li>地址：公司地址</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<ul class="footer_nav hidden-xs">
+							<li><a href="#">新闻中心</a></li>
+							<li><a href="#">产品中心</a></li>
+							<li><a href="#">招聘中心</a></li>
+							<li><a href="#">关于我们</a></li>
+						</ul>
+						<p class="copyr">
+							<a href="#">
+								Copyright © 公司版权所有鲁ICP备13009425号
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript" src='{%static 'js/jquery-1.11.3.js' %}' ></script>
+        <script type="text/javascript" src='{%static 'js/main.js' %}' ></script>
+        <script type="text/javascript" src='{%static 'js/TouchSlide.1.1.js' %}' ></script>
+		<script>
+			TouchSlide({
+				slideCell:"#slideBox",
+				titCell:".hd li",
+				mainCell:".bd ul",
+				effect:"leftLoop"
+//				autoPlay:true//自动播放
+			});
+			TouchSlide({
+				slideCell:"#news_slide",
+				mainCell:".bd ul",
+				effect:"leftLoop",
+				autoPlay:true//自动播放
+			});
+		</script>
+    <style>
+        .demand
+        {
+            background-color: #d6e9c6;
+            height: 350px;
+            border-radius: 20%
+        }
+        .demand_title{
+            font-size: 18px;
+        }
+    </style>
+	</body>
+</html>

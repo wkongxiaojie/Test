@@ -1,0 +1,97 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+	</head>
+	<body class="bg01">
+		<div class="header hidden-xs hidden-sm clearfix">
+			<div class="container">
+				<a href="index.html" class="logo">
+					<img height="450" src='{%static  'upload/map.png'%}'/>
+				</a>
+                <div class="nav">
+                            <ul>
+                                <li><a href="/OfficialWebsite/index.html/">首页</a></li>
+                                <li><a href="/OfficialWebsite/cplist.html?Typed=Default&numberpages=1">风格效果图</a></li>
+                                <li class="on"><a href="/OfficialWebsite/about.html">关于我们</a></li>
+                                <li><a href="/OfficialWebsite/newslist.html?numberpages=1">变形记</a></li>
+                                <li><a href="/OfficialWebsite/contact.html">联系我们</a></li>
+                                <li><a href="/OfficialWebsite/message.html">在线留言</a></li>
+                            </ul>
+                        </div>
+			</div>
+		</div>
+		<div class="page_top">
+			<a href="#">
+				<img src="{% static 'images/33559cd60695225.jpg' %}"/>
+			</a>
+		</div>
+		<div class="page_nav_box">
+			<div class="container">
+				<div class="row">
+					<div class="page_pos col-lg-12 text-center">
+						<span>当前位置：</span>
+						<a href="/OfficialWebsite/index.html/">首页</a>
+						&gt;
+						<a href="/OfficialWebsite/about.html">关于我们</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="page_left col-lg-3 col-md-3 col-sm-3 col-xs-12">
+				<div class="sub_nav">
+					<ul>
+						<li class="on"><a href="#">公司简介</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page_right col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<div class="page_content">
+					装修行业**重要的是人，我们要做的是将工人、设计师、建材、公司都进驻平台，通过平台规则，将市场完善，解决行业痛点，实现oto 。 微信小程序的开发计划，还有APP软件开发界面，一整个闭环流程。 小程序完成的是APP结构里几个很小的功能，希望能取得融资，完成推广计划，实现收支平衡。 另外，我们想要为图片上乃至全国的师傅们提供一个看得见摸得着的工作，让他们不再蹲在路边，让业主更快更方便找到他们所需要的人。
+随着互联网以及移动互联网时代的到来，装饰行业的营销方式也在逐渐变革，也在一步步拥抱互联网，在大趋势下，装饰公司也是各展路数，而从实际效果来看，主流装饰公司通过购买个人信息扫电话的营销方式已经在逐步落伍，并随着公民个人信息安全意识的提高，此种营销方式已经受到来自客户的质疑，也注定这样的营销方式将慢慢退出历史舞台。
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="footer_ewm col-lg-3 col-md-3 col-sm-3 hidden-xs">
+							<img src="{% static 'upload/code.png' %}"/>
+						</div>
+						<ul class="footer_contact col-lg-9 col-md-9 col-sm-9 hidden-xs">
+							<li>电话：<i>400-000-0000</i></li>
+							<li>服务时间：周一到周五早8:00到晚5:00</li>
+							<li>邮箱：xxx@163.com</li>
+							<li>地址：公司地址</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<ul class="footer_nav hidden-xs">
+							<li><a href="#">新闻中心</a></li>
+							<li><a href="#">产品中心</a></li>
+							<li><a href="#">招聘中心</a></li>
+							<li><a href="#">关于我们</a></li>
+						</ul>
+						<p class="copyr">
+							<a href="http://www.miitbeian.gov.cn">
+								Copyright © 公司版权所有鲁ICP备13009425号
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		 <script type="text/javascript" src='{%static 'js/jquery-1.11.3.js' %}' ></script>
+        <script type="text/javascript" src='{%static 'js/main.js' %}' ></script>
+	</body>
+</html>

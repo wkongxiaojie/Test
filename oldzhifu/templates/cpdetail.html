@@ -1,0 +1,122 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body class="bg01">
+		<div class="header hidden-xs hidden-sm clearfix">
+			<div class="container">
+				<a href="index.html" class="logo">
+					<img height="450" src='{%static  'upload/map.png'%}'/>
+				</a>
+					<div class="nav">
+			    	<ul>
+			        	<li><a href="/OfficialWebsite/index.html/">首页</a></li>
+                        <li class="on"><a href="/OfficialWebsite/cplist.html?Typed=Default&numberpages=1">风格效果图</a></li>
+                        <li><a href="/OfficialWebsite/about.html">关于我们</a></li>
+                        <li><a href="/OfficialWebsite/newslist.html?numberpages=1">变形记</a></li>
+                        <li><a href="/OfficialWebsite/contact.html">联系我们</a></li>
+                        <li><a href="message.html">在线留言</a></li>
+			      	</ul>
+			    </div>
+			</div>
+		</div>
+		<div class="page_top">
+			<a href="#">
+                <img src="{%static 'images/e54820f8bb5ac746cf2fdc05fadd3a1292482.jpg' %}"/>
+			</a>
+		</div>
+         <div>
+
+
+
+         </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+						<div id="news_slide" class="news_slide_box" style="margin-left: 60%; margin-bottom: 20px;">
+							<div class="bd">
+								<ul>
+                                      {% for obj in  ProList %}
+                                          <li>
+                                            <a class="pic" href="#">
+                                                <img src="/static/{{ obj.path  }}"/>
+                                            </a>
+									       </li>
+                                          <li>
+                                            <a class="pic" href="#">
+                                                <img src="/static/{{ obj.path1  }}"/>
+                                            </a>
+									       </li>
+                                          <li>
+                                             <a class="pic" href="#">
+                                                <img src="/static/{{ obj.path2  }}"/>
+                                             </a>
+									       </li>
+                                     {% endfor %}
+								</ul>
+							</div>
+							<span class="prev"></span>
+							<span class="next"></span>
+						</div>
+					</div>
+        </div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="footer_ewm col-lg-3 col-md-3 col-sm-3 hidden-xs">
+                            <img src="{% static 'upload/code.png' %}"/>
+						</div>
+						<ul class="footer_contact col-lg-9 col-md-9 col-sm-9 hidden-xs">
+							<li>电话：<i>400-000-0000</i></li>
+							<li>服务时间：周一到周五早8:00到晚5:00</li>
+							<li>邮箱：xxx@163.com</li>
+							<li>地址：公司地址</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<ul class="footer_nav hidden-xs">
+							<li><a href="#">新闻中心</a></li>
+							<li><a href="#">产品中心</a></li>
+							<li><a href="#">招聘中心</a></li>
+							<li><a href="#">关于我们</a></li>
+						</ul>
+						<p class="copyr">
+							<a href="http://www.miitbeian.gov.cn">
+								Copyright © 公司版权所有鲁ICP备13009425号
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		 <script type="text/javascript" src='{%static 'js/jquery-1.11.3.js' %}' ></script>
+        <script type="text/javascript" src='{%static 'js/main.js' %}' ></script>
+        <script type="text/javascript" src='{%static 'js/TouchSlide.1.1.js' %}' ></script>
+		<script>
+			TouchSlide({
+				slideCell:"#slideBox",
+				titCell:".hd li",
+				mainCell:".bd ul",
+				effect:"leftLoop"
+//				autoPlay:true//自动播放
+			});
+			TouchSlide({
+				slideCell:"#news_slide",
+				mainCell:".bd ul",
+				effect:"leftLoop",
+				autoPlay:false//自动播放
+			});
+		</script>
+	</body>
+</html>
