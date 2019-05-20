@@ -2,6 +2,7 @@ from django.contrib import admin
 from zhifu.models import *
 from OfficialWebsite.models import *
 # Register your models here.
+##################################################################
 class UserConfig(admin.ModelAdmin):
     list_display = ['id', 'name', 'city', 'openid']
     list_display_links = ['name']
